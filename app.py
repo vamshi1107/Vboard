@@ -20,7 +20,7 @@ def index():
 
 
 @app.route("/board")
-def index():
+def board():
     return Response(play(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 
