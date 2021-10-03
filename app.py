@@ -14,8 +14,12 @@ canvas = ""
 
 app = Flask(__name__)
 
-
 @app.route("/")
+def index():
+    return "<a href='board'>Start</a>"
+
+
+@app.route("/board")
 def index():
     return Response(play(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
